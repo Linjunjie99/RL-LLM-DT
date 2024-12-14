@@ -1,0 +1,24 @@
+learner:
+  alg: ppo_con
+  env: olympics-running
+  num_steps: 3000000
+  data_port: 5000
+  param_port: 5001
+  model: accnn_con
+  pool_size: 32768
+  training_freq: 16
+  keep_training: false
+  batch_size: 32768
+  record_throughput_interval: 10
+
+agent:
+  gamma: 0.99
+  lam: 0.95
+  pi_lr: 0.0003
+  vf_lr: 0.001
+  clip_range: 0.2
+  ent_coef: 0.0
+  epochs: 80
+  target_kl: 0.01
+  model:
+    model_id: policy_model
